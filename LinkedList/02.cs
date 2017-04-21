@@ -45,15 +45,34 @@ class LinkedList
         if(head == null)
             return false;
         Node slow = head;
-        Node fast = head.next;
+        Node fast = head;
         while(fast.next !=null)
         {
+            slow = slow.next;
+            fast = fast.next.next;
             if(slow == fast)
+            {
+                FindPositionOfCycle(slow,fast);
                 return true;
+            }
             slow = slow.next;
             fast = fast.next.next;
         }
         return false;
+    }
+    public void FindPositionOfCycle(Node slow,Node fast)
+    {
+        slow = head;
+        while(true)
+        {
+            if(slow == fast)
+            {
+                System.Console.WriteLine("Cycle present at : " + slow.data);
+                return;
+            }
+            slow = slow.next;
+            fast = fast.next;
+        }
     }
 }
 class MainClass

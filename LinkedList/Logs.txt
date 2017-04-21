@@ -1,2 +1,4 @@
 // 21st april 2017
 01.cs           =>      Find if cycle is present in linked list[Floyds cycle detection alogorithm]
+02.cs           =>      Find if cycle is present in linked list[Floyds cycle detection alogorithm]
+                        And Find the position node where cycle is present
