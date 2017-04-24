@@ -13,7 +13,7 @@ class Node
 class LinkedList
 {
     Node head;
-    
+    Node revhead;
     public void AddNode(int data)
     {
         Node temp = new Node(data);
@@ -39,13 +39,8 @@ class LinkedList
     }
     public void IsPalindrome()
     {
-        Node head1 = head;
-        Node head2 = head;
-        head2 = ReverseList(head2);
-        PrintList(head2);
-        System.Console.WriteLine();
-        PrintList(head);
-        if(IsPalindromeUtil(head1,head2))
+        GetReverseList(head);
+        if(IsPalindromeUtil(head,revhead))
         {
             System.Console.WriteLine("List is Palindrome");
         }else
@@ -69,20 +64,23 @@ class LinkedList
         isPalindrome = (head1 !=null || head2 != null) ? false : true;
         return isPalindrome;
     }
-    private Node ReverseList(Node temp)
+    private void GetReverseList(Node temp)
     {
-        Node prev,current,next;
-        prev = null;
-        current = temp;
-        while(current != null)
-        {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
-        temp = prev;
-        return prev;
+       if(temp != null)
+       {
+            GetReverseList(temp.next);
+            if(revhead == null)
+            {
+                revhead = new Node(temp.data);
+            }else
+            {
+                Node temp1 = new Node(temp.data);
+                Node ptr = revhead;
+                while(ptr.next != null)
+                    ptr = ptr.next;
+                ptr.next = temp1;
+            }
+       }
     }
 }
 class MainClass
@@ -94,9 +92,9 @@ class MainClass
         list.AddNode(2);
         list.AddNode(3);
         list.AddNode(4);
-        list.AddNode(5);
-        list.AddNode(6);
-        list.AddNode(7);
+        list.AddNode(3);
+        list.AddNode(2);
+        list.AddNode(1);
         list.IsPalindrome();
     }
 }
