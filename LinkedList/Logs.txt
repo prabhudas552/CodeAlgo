@@ -2,3 +2,7 @@
 01.cs           =>      Find if cycle is present in linked list[Floyds cycle detection alogorithm]
 02.cs           =>      Find if cycle is present in linked list[Floyds cycle detection alogorithm]
                         And Find the position node where cycle is present
+03.cs           =>      Reverse a linked list
+04.cs           =>      print a linked list in Reverse order without modifying the original list
+05.cs           =>      Reverse a linked list using recursion
+06.cs           =>      Check if a linked list is palindrome or not
