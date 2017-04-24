@@ -6,3 +6,4 @@
 04.cs           =>      print a linked list in Reverse order without modifying the original list
 05.cs           =>      Reverse a linked list using recursion
 06.cs           =>      Check if a linked list is palindrome or not using reverse list[Get reverse list first and then compare with original list]
+07.cs           =>      Palindrome checking by only reversing the half of the list
