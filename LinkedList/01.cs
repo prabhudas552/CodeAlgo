@@ -46,7 +46,7 @@ class LinkedList
             return false;
         Node slow = head;
         Node fast = head.next;
-        while(fast.next !=null)
+        while(fast && fast.next !=null)
         {
             if(slow == fast)
                 return true;
