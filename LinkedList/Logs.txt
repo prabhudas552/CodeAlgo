@@ -10,3 +10,4 @@
 08.cs           =>      PairWise swap elements of linked list by copying data
 09.cs           =>      PairWise swap elements of linked list by re-arranging the links of elements
 10.cs           =>      Delete Alternative nodes in a linked list
+11.cs           =>      Clone a Linked list with next and random pointer Method-1(o(n) extra space,o(n^2) time complexity)
