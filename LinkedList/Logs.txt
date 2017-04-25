@@ -9,3 +9,4 @@
 07.cs           =>      Palindrome checking by only reversing the half of the list
 08.cs           =>      PairWise swap elements of linked list by copying data
 09.cs           =>      PairWise swap elements of linked list by re-arranging the links of elements
+10.cs           =>      Delete Alternative nodes in a linked list
